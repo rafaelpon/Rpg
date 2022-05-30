@@ -87,7 +87,7 @@ typedef struct pers
 
 struct inimigo1
 {
- 	char nome[10];                
+ 	char nome[20];                
  	int vida;
  	int dano;
  	int defesa; 
@@ -95,7 +95,7 @@ struct inimigo1
   
 
 	
-}orc ={"Orc",10,10,5,6},cava ={"Cavaleiro Zumbi",10,10,5,6}, ogro = {"Ogro",10,10,5,6}, x1 ={"barbaro",10,10,5,6}, x2 ={"Golem de Gelo",10,10,5,6}, x3 = {"Rei barbaro",10,10,5,6};
+}orc ={"Orc",15,12,5,3},cava ={"Cavaleiro Zumbi",16,13,5,7}, ogro = {"Ogro",14,10,5,4}, x1 ={"barbaro",30,16,5,6}, x2 ={"Golem de Gelo",34,15,5,4}, x3 = {"Rei barbaro",40,16,5,7};
 	
 
 
@@ -395,19 +395,19 @@ system("cls");
 	{
 		case 1: 
 		
-		armadura1.defesa = 5 + jogador.constit*2/3;
+		armadura1.defesa = 6 + jogador.constit*2/3;
 		printf("\n\nvoce escolheu a Armadura de ferro\n\n");
 		break;
 		
 	    case 2:
 		
-	armadura2.defesa = 5 + jogador.constit*2/3;
+	armadura2.defesa = 7 + jogador.constit*2/3;
 	printf("\n\nvoce escolheu a Armadura de guerreiro da montanha\n\n");
 		break;	
 		
 	    case 3:
 		
-			armadura3.defesa = 5 + jogador.constit*2/3;
+			armadura3.defesa = 8 + jogador.constit*2/3;
 			printf("\n\nvoce escolheu a Armadura de cavaleiro velha\n\n");
 		break;
 		
@@ -495,8 +495,9 @@ system("cls");
 	while(t < 5 || t > 5)
 	{
     system("cls");
-     printf("\n\nParabens voce subiu de nivel!!*\n",jogador.nome);
-	printf("%svoce tem 5 pontos de habilidade para distribuir!!*\n",jogador.nome);
+    printf("\n\nParabens voce subiu de nivel!!*\n",jogador.nome);
+     
+	printf("%s voce tem 5 pontos de habilidade para distribuir!!*\n",jogador.nome);
 	
 	printf("\n digite a quantidade para a sua forca: \n");
 	 scanf("%d",&o);
@@ -518,11 +519,7 @@ system("cls");
 
 	}
 	
-    srand(time(NULL));
-	d1=rand()%6;
-	d2=rand()%6;
-    d3=rand()%6;
-	jogador.vida = d1 + d2 + d3 + jogador.constit;
+   jogador.vida=jogador.vida+jogador.constit;
 	
 
 system("cls");
@@ -555,7 +552,7 @@ while(qw==0){
          z=rand()%6;
          y=rand()%4;
 			
-		ala.dano = xx + z + y + jogador.destreza + 4 ;
+		ala.dano = xx + z + y + jogador.destreza + 6 ;
 		printf("\n\nvoce escolheu a Alabarda\n\n");
 		qw=3 ;
 	break;
@@ -567,7 +564,7 @@ while(qw==0){
          z=rand()%6+1;
          y=rand()%4+1;
 			
-		mare.dano = xx + z + y + jogador.destreza + 4 ;
+		mare.dano = xx + z + y + jogador.destreza + 5 ;
 		printf("\n\nvoce escolheu a Marreta\n\n");
 		qw=3 ;
 	break;
@@ -638,11 +635,11 @@ while(qw==0){
     
     
     
-	while(t < 5 || t > 5)
+	while(t < 10 || t > 10)
 	{
     system("cls");
-    printf("Parabens voce subiu de nivel!!*\n",jogador.nome);
-	printf("%s voce tem 5 pontos de habilidade para distribuir!!*\n",jogador.nome);
+    printf("Parabens voce subiu dois niveis!!*\n",jogador.nome);
+	printf("%s voce tem 10 pontos de habilidade para distribuir!!*\n",jogador.nome);
 	
 	printf("\n digite a quantidade para a sua forca: \n");
 	 scanf("%d",&o);
@@ -659,17 +656,12 @@ while(qw==0){
 	 
       t = o+o1+o2+o3;
      
-      printf("\npontos = %d|15\n\n",t);
+      printf("\npontos = %d|10\n\n",t);
       system("pause");
 //system("cls");
 	}
 	
-    srand(time(NULL));
-	d1=rand()%6;
-	d2=rand()%6;
-    d3=rand()%6;
-	jogador.vida = d1 + d2 + d3 + jogador.constit;
-	
+    jogador.vida=jogador.vida+jogador.constit;
 
 system("cls");
 while(aw==0){
@@ -686,7 +678,7 @@ while(aw==0){
 		srand(time(NULL));
 		x=rand()%12;
 			
-		esp.dano = 8 + x + jogador.forca*2/3 ;
+		esp.dano = 10 + x + jogador.forca*2/3 ;
 		
 
 	printf("\n\nvoce escolheu a Espada De Fogo\n\n");
@@ -699,7 +691,7 @@ while(aw==0){
          z=rand()%6;
          y=rand()%4;
 			
-		pim.dano = xx + z + y + jogador.destreza + 4 ;
+		pim.dano = xx + z + y + jogador.destreza + 9 ;
 		printf("\n\nvoce escolheu a Picareta de Pedra\n\n");
 		
 	break;
@@ -711,7 +703,7 @@ while(aw==0){
          z=rand()%6+1;
          y=rand()%4+1;
 			
-		sab.dano = xx + z + y + jogador.destreza + 4 ;
+		sab.dano = xx + z + y + jogador.destreza + 6 ;
 		printf("\n\nvoce escolheu o Sabre de Luz\n\n");
 	
 	default :
@@ -731,21 +723,21 @@ while(aw==0){
 	{
 		case 1: 
 		
-		ar.defesa = 5 + jogador.constit*2/3;
+		ar.defesa = 7 + jogador.constit*2/3;
 		printf("\n\nvoce escolheu a couraca de Tantalo\n\n");
 		aw=3 ;
 		break;
 		
 	    case 2:
 		
-	ar2.defesa = 5 + jogador.constit*2/3;
+	ar2.defesa = 9 + jogador.constit*2/3;
 	printf("\n\nvoce escolheu a Armadura de Diamante\n\n");
 	aw=3 ;
 		break;	
 		
 	    case 3:
 		
-			ar3.defesa = 5 + jogador.constit*2/3;
+			ar3.defesa = 8 + jogador.constit*2/3;
 			printf("\n\nvoce escolheu acapa de cavaleiro velha\n\n");
 			aw=3 ;
 		break;
@@ -920,4 +912,3 @@ while(re=1){
 
 }
 }
-
