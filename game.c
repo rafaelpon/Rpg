@@ -715,7 +715,7 @@ while(uw==0){
 			
 		pim.dano = xx + z + y + jogador.destreza + 9 ;
 		printf("\n\nvoce escolheu a Picareta de Pedra\n\n");
-		aw=3;
+		uw=3;
 		
 	break;
 	
