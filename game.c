@@ -71,6 +71,23 @@ void historia()
 	
 	printf("\nPARA ENTAO CHEGAR AO CASTELO DOS BRABARO E DERROTAR O SUJEITO QUE TIROU A VIDA DE SEUS PAIS.\n");
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 typedef struct pers
@@ -140,6 +157,7 @@ if(ale1==1){
 
 
 		if(vez==1){
+			
 			printf("\nVez de %s\n",k->nome);
 			vez=2;
 	printf("Escolha uma das opcoes:\n");
@@ -284,6 +302,7 @@ if(ale1==1){
 
 void jogar()
 {
+	
 	srand(time(NULL));	
 	
 	system("cls");
@@ -311,7 +330,7 @@ void jogar()
 	while(h < 15 || h > 15)
 	{
 system("cls");
-	printf("%s voce tem 15 pontos de habilidade para distribuir!!*\n",jogador.nome);
+	printf("%s voce tem 15 pontos de habilidade para distribuir!!\n",jogador.nome);
 	
 	printf("\n digite a quantidade para a sua forca: \n");
 	 scanf("%d",&jogador.forca);
@@ -496,7 +515,7 @@ system("cls");
 	while(t < 5 || t > 5)
 	{
     system("cls");
-    printf("\n\nParabens voce subiu de nivel!!*\n",jogador.nome);
+    printf("\n\nParabens voce subiu de nivel!!\n",jogador.nome);
      
 	printf("%s voce tem 5 pontos de habilidade para distribuir!!*\n",jogador.nome);
 	
@@ -639,7 +658,7 @@ while(qw==0){
 	while(t < 10 || t > 10)
 	{
     system("cls");
-    printf("Parabens voce subiu dois niveis!!*\n",jogador.nome);
+    printf("Parabens voce subiu dois niveis!!\n",jogador.nome);
 	printf("%s voce tem 10 pontos de habilidade para distribuir!!*\n",jogador.nome);
 	
 	printf("\n digite a quantidade para a sua forca: \n");
@@ -749,11 +768,11 @@ while(aw==0){
 		break;
 		
 		default:
-		printf("\n invalido!\n");
+		printf("\n continue!\n");
 		system("pause");
 		system("cls");
-		jogar();	
-	
+			
+}
 	
  if(escarmad==1)
     {
@@ -795,7 +814,7 @@ if(escarm==1)
 	
 }
 
-}
+
 
 
 
@@ -868,7 +887,7 @@ while(re=1){
 
 
 
-
+system("color F0");
 
 	printf("            Bem-vindo ao RPG!!\n\n");
 	printf("   Escolha uma das opcoes para continuar:\n\n");
