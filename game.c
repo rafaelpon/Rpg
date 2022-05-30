@@ -32,6 +32,7 @@ int t=0;
 int o1=0,o2=0,o3=0; 
 int qw=0;
 int aw=0;
+int uw=0;
 
 typedef struct armardura
 
@@ -95,7 +96,7 @@ struct inimigo1
   
 
 	
-}orc ={"Orc",15,12,5,3},cava ={"Cavaleiro Zumbi",16,13,5,7}, ogro = {"Ogro",14,10,5,4}, x1 ={"barbaro",30,16,5,6}, x2 ={"Golem de Gelo",34,15,5,4}, x3 = {"Rei barbaro",40,16,5,7};
+}orc ={"Orc",15,12,5,3},cava ={"Cavaleiro Zumbi",16,13,5,7}, ogro = {"Ogro",14,10,5,4}, x1 ={"barbaro",25,16,5,6}, x2 ={"Golem de Gelo",26,15,5,4}, x3 = {"Rei barbaro",35,16,5,7};
 	
 
 
@@ -658,13 +659,13 @@ while(qw==0){
      
       printf("\npontos = %d|10\n\n",t);
       system("pause");
-//system("cls");
+
 	}
 	
     jogador.vida=jogador.vida+jogador.constit;
 
 system("cls");
-while(aw==0){
+while(uw==0){
 	printf("\nAo derrotar os soldados voce percebe que eles possuem equipamentos que parecem ter sido forjados pelos deuses, voce pode escolher alguns deles para sua batalha final!\n");
 	printf("\nescolha a sua nova arma!!\n\n");
 	printf("\t 1_Espada de Fogo     2_Picareta de Pedra   3_Sabre de Luz\n");
@@ -682,6 +683,8 @@ while(aw==0){
 		
 
 	printf("\n\nvoce escolheu a Espada De Fogo\n\n");
+	uw=3;
+	
 		break;
 		
 		case 2:
@@ -693,6 +696,7 @@ while(aw==0){
 			
 		pim.dano = xx + z + y + jogador.destreza + 9 ;
 		printf("\n\nvoce escolheu a Picareta de Pedra\n\n");
+		aw=3;
 		
 	break;
 	
@@ -705,6 +709,7 @@ while(aw==0){
 			
 		sab.dano = xx + z + y + jogador.destreza + 6 ;
 		printf("\n\nvoce escolheu o Sabre de Luz\n\n");
+		uw=3;
 	
 	default :
 	
@@ -713,7 +718,8 @@ while(aw==0){
 	 system("cls");
 	 
 	}
-
+}
+while(aw==0){
 	printf("--------------------------------------------");
 	 printf("\n\nagora escolha a sua armadura!!\n\n");
 	printf("\t 1_couraca de Tantalo.    2_Armadura de Diamante.   3_capa de cavaleiro velha.\n");
